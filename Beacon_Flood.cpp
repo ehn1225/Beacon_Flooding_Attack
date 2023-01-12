@@ -122,24 +122,24 @@ int main(int argc, char* argv[]) {
 		int size = sizeof(radiotap);
 		memcpy((char*)&packet, (char*)&radiotap, size);
 		pos += size;
-		printf("size : %d, pos : %d\n", size, pos);
+		//printf("size : %d, pos : %d\n", size, pos);
 
 		//beacon frame 복사
 		size = sizeof(beaconframe);
 		memcpy((char*)&packet + pos, (char*)&beaconframe, size);
 		pos += size;
-		printf("size : %d, pos : %d\n", size, pos);
+		//printf("size : %d, pos : %d\n", size, pos);
 
 		//Wireless_Management 복사
 		size = 12;
 		memcpy((char*)&packet + pos, (char*)&wireless_mgr, size);
 		pos += size;
-		printf("size : %d, pos : %d\n", size, pos);
+		//printf("size : %d, pos : %d\n", size, pos);
 
 		size = 2 + tag_ssid.tagLength;
 		memcpy((char*)&packet + pos, (char*)&tag_ssid, size);
 		pos += size;
-		printf("size : %d, pos : %d\n", size, pos);
+		//printf("size : %d, pos : %d\n", size, pos);
 
 		// size = sizeof(arr);
 		// memcpy((char*)&packet + pos, (char*)&arr, size);
