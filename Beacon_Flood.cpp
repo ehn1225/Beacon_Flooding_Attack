@@ -146,9 +146,9 @@ int main(int argc, char* argv[]) {
 		// pos += size;
 		// printf("size : %d, pos : %d\n", size, pos);
 
-		for(int i = 0; i < pos;i++){
-			printf("%02x ", packet[i]);
-		}
+		// for(int i = 0; i < pos;i++){
+		// 	printf("%02x ", packet[i]);
+		// }
 
 		//화면 출력
 		printf("BSSID : %s, SSID : %s\n", string(rand_mac).c_str(), ssid.c_str());
@@ -160,11 +160,3 @@ int main(int argc, char* argv[]) {
 
 	pcap_close(pcap);
 }
-
-
-		// unsigned char tmp[52];
-		// memcpy(tmp, (char *)&tag_ssid, sizeof(tag_ssid));
-
-		// for(int i = 0; i < sizeof(tag_ssid);i++){
-		// 	printf("%02x ", tmp[i]);
-		// }
